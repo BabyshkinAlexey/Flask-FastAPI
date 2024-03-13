@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      {% block title %} Shop {% endblock %}
+    </title>
+  </head>
+  <body>
+    {% block body %}
+    <table border = "solid">
+      <tr>
+        <th>Название изделия:</th>
+        <th>Цвет изделия:</th>
+        <th>Цена:</th>
+        {%for i in content %}
+          <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.color}}</td>
+            <td>{{i.price}}</td>
+          </tr>
+        {% endfor %}
+      </tr>
+    </table> 
+    <p> сделано в России </p> 
+    {% endblock %}
+  </body>
+</html>
